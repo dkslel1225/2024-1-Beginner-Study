@@ -20,6 +20,7 @@ HEAD -> 현재 작업 중인 위치를 가리킴
 ## 커밋 되돌리기
 ### amend
 > git commit --amend
+
 마지막 commit의 내용에 변경이 있을 때 사용   
 완전히 새로운 commit으로 대체 >> commit id가 바뀜     
 
@@ -29,6 +30,7 @@ HEAD -> 현재 작업 중인 위치를 가리킴
 ‘--no-edit’ option으로 commit 메시지 수정 없이 commit 수정  
 ### reset
 > git reset --
+
 commit을 아예 '제거'하는 데 사용   
 돌아갈 commit의 id를 사용
   
@@ -41,6 +43,7 @@ commit을 아예 '제거'하는 데 사용
 > ex) git reset --soft a1s2d3f 
 ### revert
 > git revert --
+
 commit을 제거하지 않고, 되돌림   
 되돌리기 위한 새로운 commit이 생성됨       
 --edit 옵션이 default    
