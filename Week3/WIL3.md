@@ -51,7 +51,7 @@ commit을 제거하지 않고, 되돌림
 > ex) git revert --no commit  "commit id" >>  직접 커밋하지 않고,  revert 내용을 staging area에 올림 
 
 ### reset vs revert
-reset은 commit을 삭제함
-revert는 commit을 삭제하기보다 생성하여 되돌림
-reset이라면 A가 그냥 없어졌겠지만.. revert는 A'로 남는다.
-, 주로 revert를 사용하게됨(리셋은 충돌 위험이 있어서)
+reset은 commit을 삭제함   
+revert는 commit을 삭제하기보다 생성하여 되돌림   
+reset이라면 A가 그냥 없어졌겠지만.. revert는 A'로 남는다.   
+, 주로 revert를 사용하게됨(리셋은 충돌 위험이 있어서)   
