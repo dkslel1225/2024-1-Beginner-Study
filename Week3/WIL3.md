@@ -33,11 +33,11 @@ commit을 아예 '제거'하는 데 사용
 > git reset --'option' “<commit id>”   
 > ex) git reset --soft a1s2d3f   
 ### reset의 3가지 옵션
-> < soft, mixed(default), hard >
+< soft, mixed(default), hard >   
 
-> reset --soft : 커밋만 취소, 변경 사항이 로컬레포에서 Staging Area로 돌아감 (changes to be comitted..)
-> reset --mixed : 커밋을 취소, 변경 사항이 working directory로 돌아감 (changes not staged for commit..)
-> reset --hard : 커밋 취소, 변경 사항을 모두 제거하고 이전 커밋으로 돌아감 
+- reset --soft : 커밋만 취소, 변경 사항이 로컬레포에서 Staging Area로 돌아감 (changes to be comitted..)
+- reset --mixed : 커밋을 취소, 변경 사항이 working directory로 돌아감 (changes not staged for commit..)
+- reset --hard : 커밋 취소, 변경 사항을 모두 제거하고 이전 커밋으로 돌아감 
 
 ### revert
 commit을 제거하지 않고, 되돌림   
