@@ -12,26 +12,26 @@ HEAD -> 현재 작업 중인 위치를 가리킴
 다음 commit의 base가 되는 commit   
 새로운 commit이 생기면 HEAD도 변경(최신 커밋이 현재 작업중인 위치일테니까)   
 ## git status
-> Changes to be committed:      (위치 staging area, commit 필요)   
-> Changes not staged for commit:(위치 working directory, add 필요)   
-> Untracked files:              (add 필요)   
-세 가지 상태에 따라 파일을 분류하여 확인   
+> Changes to be committed:      (in staging area / commit 필요)   
+> Changes not staged for commit:(modfied / add 필요)   
+> Untracked files:              (in working directory / add 필요)
+> 영역: working directory, staging area, repository
 
 ## 커밋 되돌리기
 ### commit --amend
-마지막 commit의 내용에 변경이 있을 때 사용
-완전히 새로운 commit으로 대체 >> commit id가 바뀜
-vim으로 진입하여 commit 메시지를 수정하게 됨 (*vim:편집기임)
+마지막 commit의 내용에 변경이 있을 때 사용   
+완전히 새로운 commit으로 대체 >> commit id가 바뀜   
+vim으로 진입하여 commit 메시지를 수정하게 됨 (*vim:편집기임)   
 
-‘-m’ option으로 vim 진입 없이 commit 메시지 수정하기
-> git commit --amend -m “커밋 메시지”
-‘--no-edit’ option으로 commit 메시지 수정 없이 commit 수정
-> git commit --amend --no-edit
+‘-m’ option으로 vim 진입 없이 commit 메시지 수정하기   
+> git commit --amend -m “커밋 메시지”   
+‘--no-edit’ option으로 commit 메시지 수정 없이 commit 수정   
+> git commit --amend --no-edit   
 ### reset
-commit을 아예 '제거'하는 데 사용 
-돌아갈 commit의 id를 사용 
-> git reset --'option' “<commit id>”
-> ex) git reset --soft a1s2d3f
+commit을 아예 '제거'하는 데 사용   
+돌아갈 commit의 id를 사용   
+> git reset --'option' “<commit id>”   
+> ex) git reset --soft a1s2d3f   
 ### reset의 3가지 옵션
 > < soft, mixed(default), hard >
 
@@ -41,8 +41,8 @@ commit을 아예 '제거'하는 데 사용
 
 ### revert
 commit을 제거하지 않고, 되돌림   
-되돌리기 위한 새로운 commit이 생성됨    
---edit 옵션이 default   
+되돌리기 위한 새로운 commit이 생성됨       
+--edit 옵션이 default    
 > ex) git revert --no edit "commit id" >>  편집기 진입 없이 바로 revert 
 > ex) git revert --no commit  "commit id" >>  직접 커밋하지 않고,  revert 내용을 staging area에 올림 
 
