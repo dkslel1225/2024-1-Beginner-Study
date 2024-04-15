@@ -6,7 +6,7 @@
 승인 없이 Pull Request를 병합할 수 없도록 제한 가능     
 특정 브랜치에 Push 가능자를 제한 가능     
 ## 브랜치 전략
-+ rocal repo가 꼭 깃허브만 있는건 아니다.. (보편적으로는 깃허브)     
+rocal repo가 꼭 깃허브만 있는건 아니다.. (보편적으로는 깃허브)     
 브랜치 관리 전략 - Git Flow vs. GitHub Flow    
 깃플로우가 더 안정적이지만 자주 업데이트, 배포가 이루어지는 요즘의 웹,앱에는 부적함함 -> 깃허브 플로우 전략이 대두되고 있다.   
 ### git flow
@@ -20,9 +20,9 @@
 feature 브랜치의 기반이 됨    
 #### feature
 develop에서 분기하여 작업(로그인, 주문, 배송.. 그런거 여기서 작업)      
-작업 완료 후 develop으로 병합       
-* 작업 내용에 따라 이름을 작성하며, 단 - main, master, develop, release, hotfix 제외
-* 25페이지: feature 브랜치에서-작업하면서 커밋 2번 더 발생했고>개발 끝나고 develop 브랜치로 병합한 그림
+작업 완료 후 develop으로 병합          
+작업 내용에 따라 이름을 작성하며, 단 - main, master, develop, release, hotfix 제외
+> 25페이지: feature 브랜치에서-작업하면서 커밋 2번 더 발생했고>개발 끝나고 develop 브랜치로 병합한 그림
 #### release
 배포 준비를 위한 브랜치(자잘한 버그 수정, QA 작업)    
 develop 브랜치에서 분기하여 main 브랜치로 병합
@@ -30,7 +30,7 @@ develop 브랜치에서 분기하여 main 브랜치로 병합
 즉각적 수정(긴급...)이 필요한 경우 사용한다    
 main 브랜치에서 분기     
 main, develop 모두에 병합 필요      
-* git flow의 흐름 - 29페이지 이미지
+git flow의 흐름 - 29페이지 이미지
 ### github flow
 * 사용하는 브랜치: main, feature 브랜치만 두고 사용함
 #### main
