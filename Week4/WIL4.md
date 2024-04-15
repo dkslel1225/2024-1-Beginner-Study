@@ -1,42 +1,42 @@
 # What i learned - week4
-## 브랜치 관리
+### 브랜치 관리
 서로의 작업에 영향을 주지 않기 위해 브랜치 분리    
 각 브랜치가 어떤 작업을 위해 존재하는지 구분하며 main브랜치를 안전하게 관리해야 함    
 ### 브랜치 보호 규칙
 승인 없이 Pull Request를 병합할 수 없도록 제한 가능     
 특정 브랜치에 Push 가능자를 제한 가능     
-## 브랜치 전략
+### 브랜치 전략
 rocal repo가 꼭 깃허브만 있는건 아니다.. (보편적으로는 깃허브)     
 브랜치 관리 전략 - Git Flow vs. GitHub Flow    
 깃플로우가 더 안정적이지만 자주 업데이트, 배포가 이루어지는 요즘의 웹,앱에는 부적함함 -> 깃허브 플로우 전략이 대두되고 있다.   
-### git flow
+## git flow
 * 주로 사용하는 브랜치: main(master), develop   
 * 보조 브랜치: feature, release, hotfix    
-#### main(=master)
+### main(=master)
 프로젝트 생성 시 기본으로 생성되는 첫번째 브랜치. 안 없어짐.          
 메인으로 병합될 때마다 제품의 새로운 버전이 탄생         
-#### develop
+### develop
 두번째 브랜치. 안 없어짐.     
 feature 브랜치의 기반이 됨    
-#### feature
+### feature
 develop에서 분기하여 작업(로그인, 주문, 배송.. 그런거 여기서 작업)      
 작업 완료 후 develop으로 병합          
 작업 내용에 따라 이름을 작성하며, 단 - main, master, develop, release, hotfix 제외
 > 25페이지: feature 브랜치에서-작업하면서 커밋 2번 더 발생했고>개발 끝나고 develop 브랜치로 병합한 그림
-#### release
+### release
 배포 준비를 위한 브랜치(자잘한 버그 수정, QA 작업)    
 develop 브랜치에서 분기하여 main 브랜치로 병합
-#### hotfix
+### hotfix
 즉각적 수정(긴급...)이 필요한 경우 사용한다    
 main 브랜치에서 분기     
 main, develop 모두에 병합 필요      
 git flow의 흐름 - 29페이지 이미지
-### github flow
+## github flow
 * 사용하는 브랜치: main, feature 브랜치만 두고 사용함
-#### main
+### main
 릴리즈가 없으니.. 메인은 항상 배포 가능 상태로 유지     
 핫픽스도 디벨롭도 없으니.. main으로 병합전에 충분한 테스트 필요     
-#### feature
+### feature
 Git Flow와 달리 이외 브랜치들을 구분하지 않음(feature가 끝이다)           
 main에서 분기하여 작업 후 다시 main으로 병합(*이름 잘 지어야 함)     
 -> feature 에서의 코드 리뷰가 더욱 중요해짐
